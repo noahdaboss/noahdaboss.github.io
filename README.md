@@ -1,226 +1,176 @@
-# Get started building your personal website
+# Introduction theme for Hugo
+[![Build Status](https://travis-ci.com/victoriadotdev/hugo-theme-introduction.svg?branch=master)](https://travis-ci.com/victoriadotdev/hugo-theme-introduction)
+![Latest Release](https://img.shields.io/github/tag/victoriadotdev/hugo-theme-introduction.svg)
 
-### Showcase your software development skills
+Introduction is a minimalist, highly-versatile theme for Hugo. It can be configured as a single page, or as a full-featured site with multiple sections. It is multilingual, responsive, and includes a light and dark theme.
 
-This repository gives you the code you'll need to kickstart a personal website that showcases your work as a software developer. And when you manage the code in a GitHub repository, it will automatically render a webpage with the owner's profile information, including a photo, bio, and repositories.
+![Main page screenshot](https://github.com/victoriadotdev/hugo-theme-introduction/blob/master/images/screenshot.png)
 
-Your personal website is waiting to be personalized, though. It includes space to highlight your specific areas of interest in software development, like languages or industries. And it's standing by to publish your next great blog post.
+Features:
 
-It's all possible using the combination of [Jekyll](https://jekyllrb.com/docs/) (for building your website), [GitHub Pages](https://pages.github.com/) (for hosting your website), and [GitHub's API](https://developer.github.com/v3/) (for automatically populating your website with content).
+* Multilingual - supports side-by-side content in different language versions
+* Custom index page sections from Markdown files
+* Projects and Blog sections
+* Page load fade-in CSS effect and smooth scrolling to anchor links
+* Straightforward customization via `config.toml`
+* Styled Markdown throughout with syntax highlighting
 
-## Installation
+Developer-friendly:
 
-### Fork the `github/personal-website` repo
+* Sass files included with instant compiling to CSS thanks to [Hugo Pipes](https://gohugo.io/hugo-pipes/postcss/) and [PostCSS](https://gohugo.io/hugo-pipes/postcss/)
+* Thoughtful use of Sass variables makes creating new colour schemes easy
 
-You'll be making your own copy of the "personal website starter" repository so you have your own project to customize. A "fork" is a copy of a repository. So select "Fork" atop [the `github/personal-website` repository](https://github.com/github/personal-website).
+# Getting started
+## Requirements
+- Extended version of [Hugo](https://gohugo.io/getting-started/installing/) (latest version recommended)
+- To make changes to the theme CSS:
+  - [autoprefixer](https://github.com/postcss/autoprefixer): `npm install -g autoprefixer`
+  - [postcss-cli](https://github.com/postcss/postcss-cli):`npm install -g postcss-cli`
 
-Once you've found a home for your forked repository, it's yours. You're the owner, so you're ready to publish, if you wish.
-
-### Install in your local development environment
-
-If you want to manage your website in a local web development environment, you'll be using [Ruby](https://jekyllrb.com/docs/installation/).
-
-Once you've found a home for your forked repository, **[clone it](https://help.github.com/articles/cloning-a-repository/)**.
-
-#### Install Jekyll
-
-Jekyll is a [Ruby Gem](https://jekyllrb.com/docs/ruby-101/#gems) that can be installed on most systems.
-
-1. Install a full [Ruby development environment](https://jekyllrb.com/docs/installation/)
-2. Install Jekyll and [bundler](https://jekyllrb.com/docs/ruby-101/#bundler) [gems](https://jekyllrb.com/docs/ruby-101/#gems)
-```
-gem install jekyll bundler
-```
-3. Change into your new directory
-```
-cd personal-website
-```
-4. Install missing gems
-```
-bundle install
-```
-5. Build the site and make it available on a local server
-```
-bundle exec jekyll serve
+## Get the theme
+Run from the root of your Hugo site:
+```sh
+$ git clone https://github.com/victoriadotdev/hugo-theme-introduction.git themes/introduction
 ```
 
-You should see something like:
+Alternatively, you can include this repository as a [git submodule](https://git-scm.com/book/de/v1/Git-Tools-Submodule). This makes it easier to update this theme if you have your Hugo site in git as well:
 
-```
-Configuration file: /octocat/personal-website/_config.yml
-            Source: /octocat/personal-website
-       Destination: /octocat/_site
- Incremental build: disabled. Enable with --incremental
-      Generating...
-   GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.
-                    done in 14.729 seconds.
- Auto-regeneration: enabled for '/octocat/personal-website'
-    Server address: http://127.0.0.1:4000
-  Server running... press ctrl-c to stop.
+```sh
+$ git submodule add https://github.com/victoriadotdev/hugo-theme-introduction.git themes/introduction
 ```
 
-Don't worry about the "No GitHub API authentication could be found" message. [API authentication is only necessary](https://github.com/jekyll/github-metadata/blob/master/docs/authentication.md) if you intend to display more detailed metadata, like a branch name.
+## Preview the theme
 
-6. Now browse to [http://localhost:4000](http://localhost:4000)
-
-### Publish
-
-When you host your personal website's code on GitHub, you get the support of free hosting through GitHub Pages.
-
-**The fastest approach** is to rename your repository `username.github.io`, where `username` is your GitHub username (or organization name). Then, the next time you push any changes to your repository's `master` branch, they'll be accessible on the web at your `username.github.io` address.
-
-**If you want to use a custom domain**, you'll want to add it to your repository's "Custom domain" settings on github.com. And then register and/or [configure your domain with a DNS provider](https://help.github.com/articles/quick-start-setting-up-a-custom-domain/).
-
-## Customization
-
-It's your website, and you control the source code. So you can customize everything, if you like. But we've provided a handful of quick customizations for you to consider as you get your website off the ground.
-
-### Quick configuration changes
-
-Most customizations can be done in a matter of seconds, by revising your repository's `_config.yml` file. Just remember to restart your local server each time you save new changes so your Jekyll-powered website rebuilds correctly:
-
-1. Shut down your server by entering the keyboard command <kbd>CTRL</kbd>+<kbd>c</kbd>
-2. Restart your server: `bundle exec jekyll serve`
-
-
-#### Layout
-
-Your website will display in a two-column layout by default on larger-screen devices, with your photo, name, and basic information displayed in a left-aligned "sidebar." You can quickly switch to a "stacked" single-column layout by changing the line in your `_config.yml` file that reads `layout: sidebar` to `layout: stacked`.
-
-#### Style
-
-Your website appears with a "light" white and gray background by default, with dark text. You can quickly switch to a "dark" background with white text by changing the line in your `_config.yml` file that reads `style: light` to `style: dark`.
-
-#### Projects
-
-The "My Projects" section of your website is generated by default with your nine most recently "pushed" repositories. It also excludes repositories that you forked, by default. But each of these parameters can be quickly customized in your repository's `_config.yml` file, under the `projects` dictionary line.
-
-Parameters include:
-
-- `sort_by`: The method by which repositories are sorted. Options include `pushed` and `stars`.
-- `limit`: The maximum number of repositories that will be displayed in the "My Projects" section of your website. Out of the box, this number is set to `9`.
-- `exclude`:
-   - `forks`: When `true`, repositories you've forked will be excluded from the listing.
-   - `projects`: A list the repository names you want to exclude from the listing.
-
-#### Topics
-
-Your website comes pre-configured with three topics (e.g. "Web design" and "Sass") that appear in a section titled "My Interests." These are also stored in your repository's `_config.yml` file, where you can define each topic's name and two other optional details:
-
-- `web_url`: The web address you'd like to your topic to link to (e.g. `https://github.com/topics/sass`).
-- `image_url`: The web address of an (ideally square) image that you'd like to appear with your topic.
-
-#### Social media
-
-Your website supports linking and sharing to social media services you're using, including Behance, Dribbble, Facebook, LinkedIn, Medium, Stack Overflow, Twitter, and YouTube. To identify the services you use:
-
-1. Edit your repository's `_config.yml` file.
-2. Edit the `social_media` dictionary line, and represent the services you like in a simple `key: value` form:
+Introduction ships with an fully configured example site. For a quick preview:
 
 ```
-social_media:
-  behance: your_username
-  dribbble: your_username  
-  facebook: your_username
-  hackerrank: your_username
-  instagram: your_username
-  keybase: your_username
-  linkedin: your_username
-  medium: your_username
-  stackoverflow: your_user_id
-  telegram: your_username
-  twitter: your_username
-  unsplash: your_username
-  vk: your_username
-  website: http://your_website_url
-  youtube: your_username
+cd exampleSite/
+hugo serve  --themesDir ../..
 ```
 
-Links to your profile for each of the services you define will appear in the `<header>` of your website, appended to your bio. And if those services support sharing, any blog posts that you publish will include links to share that post using each social media service.
+Then visit `http://localhost:1313/` in your browser to view the example site.
 
-**Note**: This feature is supported by two files in your repository:
 
-- `/_data/social_media.yml`: Defines each of the supported services, including variable name, display name, URL path, and SVG icon.
-- `/_includes/social_media_share_url.html`: Outputs the share URL required for any of the supported social media services that support sharing URLs.
+# Add content
 
-If you're interested in adding a social media service that's not already supported in this repo, you can edit these two files to build that support.
+The following explains how to add content to your Hugo site. You can find sample content in the `exampleSite/` folder.
 
-## Adding pages
+## Introduction section
 
-To **add a page** to your website (e.g. detailed resume):
-
-1. Create a new `.html` or `.md` file at the root of your repository.
-2. Give it a filename that you want to be used in the page's URL (e.g. `http://yoursite.dev/filename`).
-3. At the start of your file, include the following [front matter](https://jekyllrb.com/docs/front-matter/):
+Create `index.md`:
 
 ```
----
-layout: default
----
+hugo new home/index.md
 ```
 
-## Adding blog posts
+The `title` frontmatter will be the first large heading.
 
-To **add a blog post** to your website:
+The content of `index.md` will be shown as a subtitle line.
 
-1. Create a new `.md` file in your repository's `/_posts/` directory.
-2. Give it a filename using the following format:
+You might want to set `headless` to `true` in the frontmatter. See [headless bundles](https://gohugo.io/content-management/page-bundles/#headless-bundle) for more information.
 
-```
-YEAR-MONTH-DAY-title.MARKUP
-```
+## Home page
 
-3. At the start of your file, include the following [front matter](https://jekyllrb.com/docs/front-matter/):
+Content for the home page lives under `content/home/`. You may add as many files as you want to in markdown format.
 
-```
----
-title: "The title of my blog post"
----
-```
+Each markdown file will show as a section on the home page and can be ordered by the `weight` value in the file's frontmatter. You can set `image` to show an image on the left side of the section. The image file must be in the `content/home/` folder.
 
-Your website comes with a placeholder blog post that you can reference. Notably, its [front matter](https://jekyllrb.com/docs/front-matter/) declares `published` as `false`, so that it won't appear on your website.
-
-While you can define a `layout` in the front matter, your website is pre-configured to assign the `post` layout to all of the posts in your `/_posts/` directory. So you don't have to declare that in your posts.
-
-Jekyll's conventions for authoring and managing blog posts is very flexible. You can [learn more in Jekyll's documentation for "Posts."](https://jekyllrb.com/docs/posts/)
-
-## Content and templates
-
-To give you a sound foundation to start your personal website, your repository includes a handful of "includes" -- dynamic `.html` files that are re-used throughout your website. They're all stored in the `/_includes/` directory.
-
-There are the usual suspects, like `header.html` and `footer.html`. But there are few more worth pointing out:
-
-- `interests.html`: A heading and dynamic list of "My Interests," which is populated with the [topics](#topics) you list in your `_config.yml`.
-- `masthead.html`: A collection of your avatar, name, bio, and other metadata that's displayed prominently on all your webpages to help identify what the website is about.
-- `post-card.html`: A compact, summarized presentation of a blog post, re-used to display a listing of your latest blog posts.
-- `projects.html`: A heading and dynamic list of "My Projects," which is populated with a listing of your newest GitHub repositories.
-- `repo-card.html`: A compact, summarized presentation of a repository, re-used to display a listing of your GitHub repositories.
-- `thoughts.html`: A heading and dynamic list of "My Thoughts," which is populated with a listing of your latest blog posts.
-- `topic-card.html`: A compact, summarized presentation of a topic (defined in your `_config.yml`), re-used to display a listing of your interests.
-
-### Layouts
-
-Your repository comes with three layouts:
-
-- **default**: Not used by any of the built-in pages or posts, but useful for any new pages you create.
-- **home**: Used by your `index.html` homepage to display listings of your projects, interests, and (optionally) your blog posts.
-- **post**: Used by default by the posts in your `/_posts/` directory.
-
-Jekyll's convention for defining layouts is very flexible. You can [learn more about customizing your layouts in the Jekyll "Layouts" docs.](https://jekyllrb.com/docs/layouts/)
-
-## Styles
-
-Your website is pre-configured to use [GitHub's very flexible CSS framework called "Primer,"](https://styleguide.github.com/primer/). It's currently referenced within your `styles.scss` file, using the CSS import at-rule:
+You may add a contact section by creating
+`contact.md`:
 
 ```
-@import url('https://unpkg.com/primer/build/build.css');
+hugo new home/contact.md
 ```
 
-You are, of course, welcome to remove it or replace it with another framework. Just bear in mind that the HTML that your website came pre-packaged with references multiple Primer "utility classes" to define things like column widths, margins, and background colors.
+This will always be shown as the last section on the home page.
 
-You also have the option to add on to and extend Primer's styles by adding custom CSS to your `/assets/styles.scss` Sass stylesheet. By editing this file, you can customize your website's color scheme, typography, and more.
+## Projects section
+
+Introduction provides an easy way to showcase your projects. Each project can even have its own gallery, shown as an image carousel.
+
+Start by creating an index file for the projects section:
+
+```
+hugo new projects/_index.md
+```
+
+Add a `title` and some optional content to the file.
+Add an optional `weight` for ordering projects section.
+
+To create a project, run:
+
+```
+hugo new projects/YourProjectName/index.md
+```
+
+The frontmatter of your new file contains some comments to help your configure your project.
+
+You can set `external_link` to make the project link to another website.
+
+Add images to your project by placing image files in the `YourProjectName/` folder. If you add more then one photo, they will display as a carousel gallery. Images will be ordered by filename. The first image will be shown as the project preview image. You can change the order of your images by adding a `weight` to that resource's parameters:
+
+```
+resources:
+    - src: NameOfYourImage.jpg
+      params:
+          weight: -100
+```
+
+## Blog section
+
+Create an index file for the blog:
+
+```
+hugo new blog/_index.md
+```
+Add an optional `weight` for ordering blog section on your homepage
+
+Create a new blog post with:
+
+```
+hugo new blog/YourEntryTitle.md
+```
+
+Posts will also display in the Blog section of the home page.
 
 
-## License
+# Configure your site
 
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+From `exampleSite/`, copy `config.toml` to the root folder of your Hugo site and change the fields as you like. Helpful comments are provided.
+
+## Multilingual Mode
+
+Introduction currently ships with support for English, German, Spanish and French. Contributions for other language translations are welcome.
+
+To create a new language translation, add the `.toml` file to the `i18n/` folder. See the existing files for the necessary fields.
+
+See the [hugo documentation](https://gohugo.io/content-management/multilingual/) for more details.
+
+## Menu
+
+Introduction contains a default menu. If you want to override this, you can do so by defining a `menu.main` in `config.toml`.
+
+## Google Analytics
+
+Set `googleAnalytics` in `config.toml` to activate Hugo's [internal Google Analytics template](https://gohugo.io/templates/internal/#google-analytics).
+
+## Disqus
+
+Set `disqusshortname` in `config.toml` to activate Hugo's [internal Disqus template](https://gohugo.io/templates/internal/#disqus).
+
+## Custom css
+You can add custom css files by placing them under `assets/` and adding the path to the file to `customCSS` in `config.toml`.
+
+# Issues
+
+If you have a question or get stuck, please [open an issue](https://github.com/victoriadotdev/hugo-theme-introduction/issues) for help and to help those who come after you. The more information you can provide, the better!
+
+# Contributing
+This theme would not be nearly as awesome without its amazing community of open source contributors, who are [listed here.](https://github.com/victoriadotdev/hugo-theme-introduction/releases) Thank you so much! 🖤
+
+Pull requests for bug fixes and improvements are welcome.
+
+# License
+Copyright (C) 2018 [Victoria Lai](https://victoria.dev/)
+
+Licensed under [Apache-2.0](https://github.com/victoriadotdev/hugo-theme-introduction/blob/master/LICENSE)
