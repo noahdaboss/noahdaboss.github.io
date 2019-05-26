@@ -1,34 +1,22 @@
-# Darcli
+# LampiãoSec
 
-## Demo
+https://lampiaosec.github.io
 
-You can see this theme on [gjuniioor.github.io/darcli](https://gjuniioor.github.io/darcli)
+## What is it?
 
-## Screenshot
+Quickly, our website. Our welcome card.
 
-![Screenshot of the them](assets/img/screenshot.png)
+## Logo
 
-## Why the name?
+LampiaoSec's logo was created by [Emma Pinheiro](https://github.com/n3k00n3/).
 
-It's just a joke: `dark + cli`.
+The logo is licensed under a
+[ Creative Commons Attribution-ShareAlike 4.0 International License. ](https://creativecommons.org/licenses/by-sa/4.0/).
 
-## Features
+## Why like that?
 
-* Categories
-* Disqus comments
-* SEO
-	* Description
-	* Keywords
-	* Open Cards to twitter, facebook, linkedin, google+ and others
-* Code post (but no highligth :] )
-* Atom **AND** RSS feeds
-
-## Warnings
-
-This is a theme intended to use to [lampiaosec website](https://lampiaosec.github.io) and after was converted to a general theme to jekyll.
-
-So, any questions, can you contact me ([@gjuniioor](https://github.com/gjuniioor)) or open a [issue](https://github.com/gjuniioor/darcli/issuesi).
-
-## License
-
-This theme is under [GPL3](assets/LICENSE).
+* Because we like Gnu/Linux.
+* Because we like CLI.
+* Because ascii is so cool.
+* And mainly: because none of us are good designer.
+ 
