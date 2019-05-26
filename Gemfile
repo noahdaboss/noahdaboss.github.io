@@ -1,2 +1,7 @@
-source 'https://rubygems.org'
-gem 'github-pages', '>= 89', group: :jekyll_plugins
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+gemspec
+
+
+gem 'jekyll-seo-tag'
