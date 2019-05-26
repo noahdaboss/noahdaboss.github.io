@@ -1,26 +1,28 @@
-# Dependencies
-markdown:         redcarpet
-highlighter:      pygments
+# Site specific settings
+title: "Title to this website"
+name: "Website name"
+keywords: "Key, words, about, this, website"
+baseurl: "/darcli"
+url: "http://website.com"
+description: "Website description"
+cover: "/assets/img/cover.svg"
+fanpage_id: ""
 
-# Permalinks
-permalink:        pretty
-relative_permalinks: true
+# Site general settings
+lang: "en"
+lang_alternate: "pt_BR"
+ssl: false # It will redirect to https
 
-# Setup
-title:            Hyde
-tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://hyde.getpoole.com
-baseurl:          /
+# Media
+# Just the shortname:
+# facebook: lampiaosec # Rigth
+# facebook: facebook.com/lampiaosec # Wrong
+disqus: test
+twitter: 
+facebook: 
+github: 
+google:
 
-author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
-
-paginate:         5
-
-# Custom vars
-version:          2.1.0
-
-github:
-  repo:           https://github.com/poole/hyde
+# Build settings
+markdown: kramdown
+permalink: /:categories/:title/
