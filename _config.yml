@@ -1,9 +1,9 @@
 header_pages:
   - index.md
-  - noah.md
   - about.md
+  - contact.md
 
-footer: 'follow us on <a href="https://twitter.com/">twitter</a>'
+footer: Copyright 2019
 
 # style: light # dark (default) or light
 

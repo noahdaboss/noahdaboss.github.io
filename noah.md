@@ -3,4 +3,4 @@ title: /Noah
 layout: home
 permalink: /noah
 ---
-# Hi
+# You found me your so cool
