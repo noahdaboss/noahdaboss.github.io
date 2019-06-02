@@ -1,5 +1,5 @@
 ---
-title: /Noah Stephens------------------------------------------------
+title: /Noah Stephens
 layout: home
 permalink: /
 ---
