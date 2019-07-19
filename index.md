@@ -14,7 +14,7 @@ Major: Electrical/Computer Engineering
 Minor: Computer Science
 `` ``
 I work at CPHandheld as a Software Engineering Intern
-I write code and frequent Stackoverflow
+I write code, design circuit boards in Altium, and occationally use Solidworks.
 ````
         
 
