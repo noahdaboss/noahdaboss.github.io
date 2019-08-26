@@ -6,9 +6,7 @@ permalink: /
 
 Website currently under development
 ====================================
-`` ``
-I went to Castle High School in Paradice, IN
-`` ``
+
 I currently go to Lipscomb Univerity in Nashville, TN
 Major: Electrical/Computer Engineering
 Minor: Computer Science
